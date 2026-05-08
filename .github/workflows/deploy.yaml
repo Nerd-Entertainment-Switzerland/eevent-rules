@@ -4,20 +4,25 @@ on:
   push:
     branches: [ master ]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build_docs:
     name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.104.3'
+          hugo-version: '0.161.1'
           extended: true
 
       - name: Build
@@ -28,12 +33,19 @@ jobs:
 
       - name: Set CNAME
         run: |
-          mkdir -p ./website/public
-          echo "rules.eevent.ch" > ./website/public/CNAME
+          mkdir -p ./public
+          echo "rules.eevent.ch" > ./public/CNAME
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          host: rules.eevent.ch
+
+      - name: Upload page artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
 
       - name: Deploy to GitHub Pages
-        if: ${{ github.ref == 'refs/heads/master' }}
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/public
+        id: deployment
+        uses: actions/deploy-pages@v5
