@@ -22,9 +22,11 @@ The official tournament page will be shared via the main communication channel e
 The tournament is played in the following stages:
 
 | State      | Description                                                                                                                             |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Qualifiers | X groups with Swiss Rounds in the Best-of-X format. The top X teams qualify for the second stage. The Swiss rounds will not be seeded.  |
 | Finals     | Single Elimination in the Best-of-X format. The Elimination Bracket will be seeded according to the Swiss results (example. 1st vs 4th) |
+
+The exact details of the format will be announced.
 
 #### Side Selection
 
@@ -45,18 +47,34 @@ The Tiebreakers of the Swiss Rounds will be automatically calculated by Battlefy
 First appointment for the team representative will be the briefing on Saturday at 10:00. The Tournament itself will start one hour later at 11:00.
 All players must be at the location at the start of the tournament.
 
+## Scouting
+
+Players must disclose all League of Legends accounts they own or have access to upon request by an opposing team or tournament admin.
+This ensures fair scouting rights for all participants. Deliberately concealing accounts to prevent opponents from scouting is considered
+deception.
+
 ## Game Settings
 
-#### Server
+### Server
 
-EUW
+Europe West (EUW)
 
 #### Match Settings
 
-Mode: 5v5
+In case a lobby needs to be created manually (usually Battlefy takes care), follow these settings:
 
-Version: Latest patch
+- **Map**: Summoner's Rift (SR)
+- **Team Size**: 5
+- **Password**: eevent2026
+- **Game Type**: Tournament Draft (TD)
+- **Allow Spectators**: All
 
 ### Skins
 
-Skins are allowed
+All Skins are allowed
+
+### 3rd Party Add-ons
+
+Third-party software or hardware that displays information not provided by the official game client is prohibited.
+This includes, but is not limited to, Blitz, Mobalytics, Overwolf, external monitor overlays, on-screen timers,
+and similar tools.
